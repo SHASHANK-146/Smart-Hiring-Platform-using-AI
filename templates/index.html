@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to InterviewLens - Resume Analyzer</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Welcome message -->
+        <h1 class="welcome-heading">
+                Welcome to <span class="highlight-i">I</span>nterview<span class="highlight-l">L</span>ens
+        </h1>
+
+        <p>Upload your resume and get tailored interview questions based on your skills.</p>
+
+        <!-- Resume upload form -->
+        <form id="uploadForm" method="POST" enctype="multipart/form-data">
+            <label for="resume">Upload Resume (.pdf, .jpg, .jpeg only):</label>
+            <input type="file" id="resume" name="resume" accept=".pdf,.jpg,.jpeg" required>
+            
+           <label for="difficulty">Select Difficulty:</label>
+            <select id="difficulty" name="difficulty">
+                <option value="" disabled selected>Select the difficulty level</option>
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Hard">Hard</option>
+            </select>
+
+
+            <button type="submit">Analyze</button>
+        </form>
+
+        <!-- Displaying generated questions -->
+        <div class="question-output" id="question-output">
+<!--            <h3>Generated Questions:</h3>-->
+            <ul id="questions-list"></ul>
+        </div>
+
+        <!-- Loading spinner -->
+        <div id="loading" class="loading">
+            <img src="/static/images/loading.gif" alt="Loading..." />
+        </div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

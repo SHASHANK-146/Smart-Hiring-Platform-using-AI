@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('/static/images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff; /* Ensure text color contrasts with the background */
+}
+
+
+.container {
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.3); /* Add transparency */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 650px;
+
+h1 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #333;
+}
+
+input[type="file"],
+select,
+button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+input[type="file"] {
+    padding: 10px 0;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.question-output {
+    margin-top: 30px;
+    text-align: left;
+    border-top: 2px solid #007bff;
+    padding-top: 20px;
+}
+
+#questions-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#questions-list li {
+    background-color: #f9f9f9;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    transition: background-color 0.3s;
+}
+
+#questions-list li:hover {
+    background-color: #f0f0f0;
+}
+
+#questions-list li:last-child {
+    margin-bottom: 0;
+}
+
+.loading {
+    display: none;
+    margin-top: 20px;
+}
+
+.loading img {
+    width: 50px;
+}
+
+.highlight-i {
+    color: red; /* Replace with your desired color for 'I' */
+}
+
+.highlight-l {
+    color: red; /* Replace with your desired color for 'L' */
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+   background-color: rgba(255, 255, 255, 0.7); /* Make background transparent */
+    color: #333; /* Text color */
+    appearance: none; /* Remove default dropdown arrow */
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none; /* For Firefox */
+}
+
+select:focus {
+    outline: none;
+    border-color: #007bff; /* Highlight border on focus */
+}
+.question-output {
+    background-color: white; /* Ensure the question output background is solid */
+    color: #333; /* Ensure text color is visible */
+}
+/* Default styles for question section */
+.question-output {
+    background-color: transparent; /* Initially set to transparent */
+    color: #333; /* Text color */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Styles for the question section after upload or pressing button */
+.question-output.uploaded, .question-output.active {
+    background-color: white; /* Change to white after action */
+}
